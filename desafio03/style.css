@@ -1,0 +1,32 @@
+table{
+    width: 800px;
+    border-collapse: collapse;
+    text-align: center;
+}
+div#container{
+    overflow-x: auto; /*Usado para tornar a tabela responisva*/
+}
+thead{
+    background-color: grey;
+    color: white;
+}
+tr, th,td{
+    border: 1px solid black;
+}
+.media{
+    text-align: left;
+    background-color: grey;
+    color: white;
+}
+.media-Num{
+    text-align: center;
+}
+col.carea{
+    background-color: aqua;
+}
+col.cdisci{
+    background-color: yellow;
+}
+col.cnotas{
+    background-color: aquamarine;
+}
