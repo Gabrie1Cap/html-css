@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Layout</title>
+    <style>
+        /*CONFIG PADRÃO DE GRID LAYOUT*/
+        div.container{
+            height: 300px ;
+            width: 98vw;
+            display: grid;
+
+            /*
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            */
+
+            /*
+            grid-template: repeat(3, 70px) / repeat(3, auto); SHORTHAND PARA OS GRID-TEMPLATE-ROWS E GRID-TEMPLATE-COLUMNS
+            */
+            grid-template-rows: 100px;
+            grid-template-columns: 200px 20% 1fr 2fr;
+
+            gap: 20px; /*ESPAÇAMENTO ENTRE GRID-ITENS*/
+
+            border: 1px dotted red;        
+            
+            /*align-items: center;
+            justify-items: center;
+            align-content: space-evenly;
+            justify-content: space-between;
+            */
+            /* 
+            place-items: center center; SHORTHAND PARA ALIGN-ITENS E JUSTIFY-ITENS
+
+            place-content: space-evenly space-between; SHRTHAND PARA ALIGN-CONTENT E JUSTIFY-CONTENT
+            */
+
+            grid-auto-rows: 70px;
+            grid-auto-columns: 100px; /*PROPRIEDADES PARA CASO SEJA ADICIONADO UM ITEM FORA DO PADRÃO ESPECIFICADO (MAIS UMA COLUNA OU MAIS UMA LINHA)*/
+        }
+        div.item{
+            border: 1px dotted blue;
+            padding: 10px;
+        }
+        div.item1{
+            border: 1px dotted blue;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        div.item2{
+            border: 1px dotted blue;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item2">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
