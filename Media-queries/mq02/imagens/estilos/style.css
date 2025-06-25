@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/*Configurações gerais*/
+
+body{
+    width: 95vw;
+    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
